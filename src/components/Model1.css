@@ -1,8 +1,8 @@
 #model1 .description {
-    width: 200px;
-    height: 225px;
+    width: 100px;
+    height: 100px;
     position: relative;
-    background-color: rgba(8,61,119,0.5);
+    background-color: #d7ecd9;
     transform: translateY(0);
     border-radius: 15px;
     transition: all 1s;
@@ -12,30 +12,31 @@
     align-items: center;
 }
 
-#model1 .member {
+#model1 .team {
     cursor: pointer;
     transition: all 1s;
 }
 
-    #model1 .member:hover {
-        transform: scale(1.01);
+    #model1 .team:hover {
+        transform: scale(1.81);
     }
 
-        #model1 .member:hover .description {
-            transform: translateY(-100%);
+        #model1 .team:hover .description {
+            scale: 1;
         }
 
 #model1 .description h1 {
-    color: #fff;
+    font-size: 20px;
+    color: #5F9EA0;
 }
 
 
 #model1 .description h2 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    color: #F21B3F;
+    color: #214e34;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 0;
 }
 
