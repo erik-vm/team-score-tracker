@@ -9,9 +9,9 @@ export default function Teams() {
         setTeam(teamArray.concat(0));
     }
 
-    const [teamIndex, setIndex] = useState(0);
+    const [teamIndex, setIndex] = useState(10);
 
-    const [teamArray, setTeam] = useState([]);
+    const [teamArray, setTeam] = useState([0,0,0,0,0,0,0,0,0,0]);
 
     const results = [];
 
@@ -31,17 +31,17 @@ export default function Teams() {
 
 
     return (
-        <div id='teams-general'>
-            <h1 className='title'> Bootcamp Project</h1>
-            <div className="divider"></div>
-            <div className="teams">
-                {results}
-
+        <div>
+            <div id='teams-general'>
+                <h1 className='title'> Bootcamp Project</h1>
+                <div className="divider"></div>
+                <div className="teams">
+                    {results}
+                </div>
             </div>
-            <div className="divider"></div>
-            <div>
-                <button onClick={handleClick}> Button</button>
-                {teamArray }
+            <div id="button">
+                <button className="description" onClick={handleClick}> <h2>Add Team!</h2></button>
+
             </div>
         </div>
 

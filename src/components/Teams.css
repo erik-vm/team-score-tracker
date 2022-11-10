@@ -47,3 +47,21 @@
     text-align: justify;
     padding: 1px 15px;
 }
+
+
+#button .description {
+    background-color: #d7ecd9; /* Green */
+    border: none;
+    color: #5F9EA0;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 9px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+    #button .description:hover {
+        color: #214e34;
+    }
