@@ -7,7 +7,6 @@ const Activity = ({StyledTableCell, StyledTableRow, name, points}) => {
           {name}
         </StyledTableCell>
         <StyledTableCell align="right">{points}</StyledTableCell>
-        
       </StyledTableRow>
     )
 }
