@@ -7,9 +7,22 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { useState } from "react";
 
 
 const Activities = () => {
+const [activities, setActivities] = useState([
+    {name: "Development  in  React  of  the  scoring  application", points:0},
+    {name: "Rover  lunar", points:0},
+    {name: "TDD  exercises", points:0},
+    {name: "Ping-pong  programming", points:0},
+    {name: "BugHunting", points:0},
+    {name: "Assessment  week  5", points:0},
+    {name: "Exercises  with  Selenium", points:0},
+    {name: "Assessment  week  6", points:0},
+
+])
+
     const StyledTableCell = styled(TableCell)(({ theme }) => ({
         [`&.${tableCellClasses.head}`]: {
           backgroundColor: theme.palette.common.black,
@@ -29,12 +42,10 @@ const Activities = () => {
           border: 0,
         },
       }));
+      
 
-      const points = [15,5,7]
-
-      let totalPoints = points.reduce((accumulator, currentValue) => {
-        return accumulator + currentValue;
-      }, 0);
+      let totalPoints = 0
+      activities.forEach(activity => totalPoints += activity.points)
 
 
     return(
@@ -48,11 +59,12 @@ const Activities = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-         
-            <Activity name={"PingPong game"} points={15} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow}></Activity>
-            <Activity name={"Idk project"} points={5} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow}></Activity>
-            <Activity name={"Funny game"} points={7} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow}></Activity>
-         
+            {
+                activities.map((activity) => (
+                    <Activity name={activity.name} points={activity.points} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow}></Activity>
+                ))
+            }
+           
         </TableBody>
       </Table>
     </TableContainer>
