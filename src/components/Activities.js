@@ -54,7 +54,7 @@ const [activities, setActivities] = useState([
         <TableHead>
           <TableRow>
             <StyledTableCell>Activities</StyledTableCell>
-            <StyledTableCell align="right">Points: {totalPoints}</StyledTableCell>
+            <StyledTableCell>Points: {totalPoints}</StyledTableCell>
             
           </TableRow>
         </TableHead>
@@ -64,7 +64,6 @@ const [activities, setActivities] = useState([
                     <Activity name={activity.name} points={activity.points} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow}></Activity>
                 ))
             }
-           
         </TableBody>
       </Table>
     </TableContainer>
