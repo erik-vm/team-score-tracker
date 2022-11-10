@@ -30,6 +30,12 @@ const Activities = () => {
         },
       }));
 
+      const points = [15,5,7]
+
+      let totalPoints = points.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+      }, 0);
+
 
     return(
         <TableContainer component={Paper}>
@@ -37,7 +43,7 @@ const Activities = () => {
         <TableHead>
           <TableRow>
             <StyledTableCell>Activities</StyledTableCell>
-            <StyledTableCell align="right">Points</StyledTableCell>
+            <StyledTableCell align="right">Points: {totalPoints}</StyledTableCell>
             
           </TableRow>
         </TableHead>
