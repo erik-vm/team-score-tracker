@@ -1,6 +1,6 @@
 #teams-general .description {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 130px;
     position: relative;
     background-color: #d7ecd9;
     transform: translateY(0);
@@ -10,13 +10,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 #teams-general .team {
     cursor: pointer;
     transition: all 1s;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
 }
 
     #teams-general .team:hover {
@@ -24,7 +27,7 @@
     }
 
         #teams-general .team:hover .description {
-            transform: translateY(-100%);
+            color: #214e34;
         }
 
 #teams-general .description h1 {

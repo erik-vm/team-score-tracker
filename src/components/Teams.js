@@ -1,5 +1,8 @@
 import './Teams.css';
-import React, { useState } from "react";
+import * as React from 'react';
+import { useState } from 'react';
+
+
 
 export default function Teams() {
 
@@ -18,12 +21,12 @@ export default function Teams() {
     let j = 1;
     for (const i of teamArray) {
         results.push(
-        <div className="team">
-            <div className="description">
+            <div className="team">
+                <div className="description">
                     <h1>Team {j}</h1>
                     <h2>{i}</h2>
-             </div>
-        </div>,
+                </div>
+            </div>
         );
         j = j + 1;
     }
