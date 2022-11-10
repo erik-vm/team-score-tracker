@@ -15,6 +15,8 @@
 #teams-general .team {
     cursor: pointer;
     transition: all 1s;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
     #teams-general .team:hover {
@@ -22,7 +24,7 @@
     }
 
         #teams-general .team:hover .description {
-            scale: 1;
+            transform: translateY(-100%);
         }
 
 #teams-general .description h1 {
