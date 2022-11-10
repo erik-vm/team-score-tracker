@@ -1,4 +1,4 @@
-#model1 .description {
+#teams-general .description {
     width: 100px;
     height: 100px;
     position: relative;
@@ -12,26 +12,26 @@
     align-items: center;
 }
 
-#model1 .team {
+#teams-general .team {
     cursor: pointer;
     transition: all 1s;
 }
 
-    #model1 .team:hover {
+    #teams-general .team:hover {
         transform: scale(1.81);
     }
 
-        #model1 .team:hover .description {
+        #teams-general .team:hover .description {
             scale: 1;
         }
 
-#model1 .description h1 {
+#teams-general .description h1 {
     font-size: 20px;
     color: #5F9EA0;
 }
 
 
-#model1 .description h2 {
+#teams-general .description h2 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     color: #214e34;
@@ -40,7 +40,7 @@
     margin-top: 0;
 }
 
-#model1 .description p {
+#teams-general .description p {
     color: #fff;
     text-align: justify;
     padding: 1px 15px;

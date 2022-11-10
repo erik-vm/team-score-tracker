@@ -1,11 +1,11 @@
 import './App.css';
-import Model1 from './components/Model1';
+import Teams from './components/Teams';
 import Activities from './components/Activities'
 
 function App() {
     return (
         <div className="App">
-            <Model1 />
+            <Teams />
             <Activities></Activities>
         </div>
     );
