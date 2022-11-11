@@ -25,10 +25,10 @@ const Activity = ({ StyledTableCell, StyledTableRow, name, points, pointsSubmitH
 
     return (
         <StyledTableRow>
-            <StyledTableCell component="th" scope="row">
+            <StyledTableCell component="th" scope="row" align="center">
                 {name}
             </StyledTableCell>
-            <StyledTableCell component="th" scope="row">
+            <StyledTableCell component="th" scope="row" align="center">
             {
                 pointIsClicked ? (
                     <td>

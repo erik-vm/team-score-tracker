@@ -47,7 +47,7 @@ const Activities = ({activities, pointsSubmitHandler}) => {
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow>
-                        <StyledTableCell><strong>Activities</strong></StyledTableCell>
+                        <StyledTableCell align="center"><strong>Activities</strong></StyledTableCell>
                         <StyledTableCell align="center"><strong>Points: {totalPoints}</strong></StyledTableCell>
             
               </TableRow>
