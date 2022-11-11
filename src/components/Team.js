@@ -51,7 +51,7 @@ const Team = ({ name, points }) => {
       >
         <Fade in={open}>
           <Box sx={boxStyle}>
-            <h2>{name}</h2>
+            <h2 className='activitiesTeamName'>{name}</h2>
             <Activities></Activities>
           </Box>
         </Fade>
