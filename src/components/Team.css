@@ -83,3 +83,15 @@ a:hover {
   transform: rotate(360deg);
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.444);
 }
+
+.boxStyle{
+  position: 'absolute' as 'absolute';
+  top: '50%';
+  left: '50%';
+  transform: 'translate(-50%, -50%)';
+  width: 400;
+  background-color: 'background.paper';
+  border: '2px solid #000';
+  box-shadow: 24;
+  padding: 4;
+};

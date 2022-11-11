@@ -7,8 +7,6 @@ function App() {
     return (
         <div className="App">
             <Teams />
-            <Activities></Activities>
-            <NewActivity></NewActivity>
         </div>
     );
 }
