@@ -5,8 +5,7 @@ const Team = ({name, points}) => {
 
   const modelToggler = () => {
     var mainContainer = document.querySelector(".main-container");
-    mainContainer.classList.toggle("show")
-  }
+    mainContainer.classList.toggle("show");
 
   const clickTeamHandler = () => {
     alert(`You clicked on ${name}`)
