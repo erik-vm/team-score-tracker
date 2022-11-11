@@ -28,6 +28,7 @@ const Activity = ({ StyledTableCell, StyledTableRow, name, points, pointsSubmitH
             <StyledTableCell component="th" scope="row">
                 {name}
             </StyledTableCell>
+            <StyledTableCell component="th" scope="row">
             {
                 pointIsClicked ? (
                     <td>
@@ -41,6 +42,8 @@ const Activity = ({ StyledTableCell, StyledTableRow, name, points, pointsSubmitH
                     <Typography onClick={() => setPointIsClicked(true)}>{points}</Typography>
                 )
             }
+            </StyledTableCell>
+            
 
         </StyledTableRow>
     )
