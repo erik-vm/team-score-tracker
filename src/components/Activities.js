@@ -10,18 +10,8 @@ import Paper from '@mui/material/Paper';
 import { useState } from "react";
 
 
-const Activities = () => {
-const [activities, setActivities] = useState([
-    {name: "Development  in  React  of  the  scoring  application", points:0},
-    {name: "Rover  lunar", points:0},
-    {name: "TDD  exercises", points:0},
-    {name: "Ping-pong  programming", points:0},
-    {name: "BugHunting", points:0},
-    {name: "Assessment  week  5", points:0},
-    {name: "Exercises  with  Selenium", points:0},
-    {name: "Assessment  week  6", points:0},
+const Activities = ({activities, pointsSubmitHandler}) => {
 
-])
 
     const StyledTableCell = styled(TableCell)(({ theme }) => ({
         [`&.${tableCellClasses.head}`]: {
@@ -61,7 +51,7 @@ const [activities, setActivities] = useState([
         <TableBody>
             {
                 activities.map((activity, i) => (
-                    <Activity name={activity.name} points={activity.points} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow} key={i}></Activity>
+                    <Activity pointsSubmitHandler={pointsSubmitHandler} name={activity.name} points={activity.points} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow} key={i}></Activity>
                 ))
             }
         </TableBody>

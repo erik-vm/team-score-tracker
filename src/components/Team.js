@@ -3,7 +3,28 @@ import './Team.css'
 import { Fade, Box, Typography, Modal, Backdrop } from '@mui/material';
 import Activities from './Activities';
 
-const Team = ({ name, points }) => {
+const Team = ({ name }) => {
+  const [activities, setActivities] = useState([
+    {name: "Development  in  React  of  the  scoring  application", points:0},
+    {name: "Rover  lunar", points:0},
+    {name: "TDD  exercises", points:0},
+    {name: "Ping-pong  programming", points:0},
+    {name: "BugHunting", points:0},
+    {name: "Assessment  week  5", points:0},
+    {name: "Exercises  with  Selenium", points:0},
+    {name: "Assessment  week  6", points:0},
+
+])
+let totalPointsCounter = 0
+activities.forEach(activity => totalPointsCounter += activity.points)
+const [totalPoints, setTotalPoints] = useState(totalPointsCounter)
+
+const pointsSubmitHandler = (newActivity) => {
+        let newActivities = activities.filter(a => !(a.name == newActivity.name))
+        newActivities.push(newActivity)
+        setActivities(newActivities)
+        setTotalPoints(totalPointsCounter += newActivity.points)
+}
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -34,7 +55,7 @@ const Team = ({ name, points }) => {
       <div className="team" onClick={handleOpen}>
         <div className="description">
           <h1>{name}</h1>
-          <h2>{points}</h2>
+          <h2>{totalPoints}</h2>
         </div>
       </div>
 
@@ -52,7 +73,7 @@ const Team = ({ name, points }) => {
         <Fade in={open}>
           <Box sx={boxStyle}>
             <h2 className='activitiesTeamName'>{name}</h2>
-            <Activities></Activities>
+            <Activities activities={activities} pointsSubmitHandler={pointsSubmitHandler}></Activities>
           </Box>
         </Fade>
       </Modal>
