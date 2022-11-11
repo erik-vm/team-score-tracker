@@ -60,8 +60,8 @@ const [activities, setActivities] = useState([
         </TableHead>
         <TableBody>
             {
-                activities.map((activity) => (
-                    <Activity name={activity.name} points={activity.points} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow}></Activity>
+                activities.map((activity, i) => (
+                    <Activity name={activity.name} points={activity.points} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow} key={i}></Activity>
                 ))
             }
         </TableBody>

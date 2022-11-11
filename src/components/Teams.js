@@ -1,17 +1,21 @@
 import './Teams.css';
 import * as React from 'react';
 import { useState } from 'react';
+import { populateTeams } from '../utils/helpers';
+import Team from './Team';
 
 
 
 export default function Teams() {
+    //teams state that holds the 10 teams initially
+    const [teams, setTeams] = useState(populateTeams)
 
-
+    //Adds a new team and updates the teams state
     const handleClick = () => {
-        setIndex(teamIndex + 1);
-        setTeam(teamArray.concat(0));
+        /* setIndex(teamIndex + 1); */
+        setTeams(() => [...teams, {name: `Team ${teams.length + 1}`, points: 0}]);
     }
-
+/* 
     const [teamIndex, setIndex] = useState(10);
 
     const [teamArray, setTeam] = useState([0,0,0,0,0,0,0,0,0,0]);
@@ -74,7 +78,7 @@ export default function Teams() {
              </div>
         );
     }
- 
+  */
 
 
 
@@ -85,14 +89,18 @@ export default function Teams() {
                 <h1 className='title'> Bootcamp Project</h1>
                 <div className="divider"></div>
                 <div className="teams">
-                    <div className="team" onClick={clickOnTeam1}>
-                        <div className="description">
-                            <h1>Team 1</h1>
-                            <h2>{teamArray[0]}</h2>
-                            {team}
-                        </div>
-                    </div>
-                    <div className="team" onClick={clickOnTeam2}>
+                    {
+                        /* for every team in teams it generates a Team.js component
+                        N.B: everytime you iterate through an array
+                             to render multiple components you should assign
+                             a unique key for every iteration */
+                        teams.map((team, i) => (
+                                                                    //unique key
+                            <Team name={team.name} points={team.points} key={i}></Team>
+                        ))
+                    }
+                    
+                    {/* <div className="team" onClick={clickOnTeam2}>
                         <div className="description">
                             <h1>Team 2</h1>
                             <h2>{teamArray[1]}</h2>
@@ -154,13 +162,12 @@ export default function Teams() {
                             <h2>{teamArray[9]}</h2>
                             {team}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
-                {results}
+                {/* {results} */}
             </div>
             <div id="button">
                 <button className="description" onClick={handleClick}> <h2>Add Team!</h2></button>
-
             </div>
         </div>
 
