@@ -72,7 +72,7 @@ const pointsSubmitHandler = (newActivity) => {
       >
         <Fade in={open}>
           <Box sx={boxStyle}>
-            <h2 className='activitiesTeamName'>{name}</h2>
+                      <h2 align="center" className='activitiesTeamName'>{name}</h2>
             <Activities activities={activities} pointsSubmitHandler={pointsSubmitHandler}></Activities>
           </Box>
         </Fade>

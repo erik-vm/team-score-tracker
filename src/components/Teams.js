@@ -164,7 +164,7 @@ export default function Teams() {
                         </div>
                     </div> */}
                 </div>
-               
+                {/* {results} */}
                 <div className="button">
                     <button className="description" onClick={handleClick}> <h2>Add Team!</h2></button>
                 </div>
