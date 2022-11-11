@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components"
   ],
-  "SelectedNode": "\\C:\\Users\\Georgia.Asimaki\\OneDrive - Solera Holdings, Inc\\Documents\\GitRepo\\team-score-tracker",
+  "SelectedNode": "\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }

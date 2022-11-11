@@ -85,7 +85,6 @@ export default function Teams() {
 
 
     return (
-        <div>
             <div id='teams-general'>
                 <h1 className='title'> Bootcamp Project</h1>
                 <div className="divider"></div>
@@ -165,13 +164,12 @@ export default function Teams() {
                         </div>
                     </div> */}
                 </div>
-                {/* {results} */}
+               
+                <div className="button">
+                    <button className="description" onClick={handleClick}> <h2>Add Team!</h2></button>
+                </div>
+            
             </div>
-            <Box textAlign='center' id="button">
-                <button className="description" onClick={handleClick}> <h2>Add Team!</h2></button>
-            </Box>
-
-        </div>
 
     );
 }
