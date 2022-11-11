@@ -7,7 +7,7 @@ const Team = (props) => {
 
   const modelToggler= ()=>{
     var mainContainer = document.querySelector(".main-container");
-    mainContainer.classList.toggle("closed");
+    mainContainer.classList.toggle("show");
 
   }
   return (
