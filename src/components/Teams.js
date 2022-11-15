@@ -9,8 +9,7 @@ import { Box } from '@mui/system';
 
 export default function Teams() {
     //teams state that holds the 10 teams initially
-    const [teams, setTeams] = useState([])
-    
+    const [teams, setTeams] = useState(populateTeams)
 
     //Adds a new team and updates the teams state
     const handleClick = () => {
