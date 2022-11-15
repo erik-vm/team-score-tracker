@@ -33,8 +33,8 @@ const Activity = ({ StyledTableCell, StyledTableRow, name, points, pointsSubmitH
                 pointIsClicked ? (
                     <td>
                         <form onSubmit={submitPoints}>
-                            <Input type='number' onChange={pointsChangeHandler} defaultValue={points} />
-                            <button type='submit' >submit</button>
+                            <Input type='number' onChange={pointsChangeHandler} defaultValue={points} sx={{maxWidth: "35px", align:"center"}}/>
+                            <button type='submit' ></button>
                         </form>
                     </td>
 
