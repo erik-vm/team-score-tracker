@@ -4,6 +4,7 @@ const api = axios.create({
     baseURL: 'http://localhost:6969/'
 });
 
+
 const team = {
     getAll: async() => {
         const response = await api.get('teams')
@@ -13,6 +14,10 @@ const team = {
         const response = await api.get(`teams/${teamId}`)
         return response.data
     },
+    addTeam: async (jsonObj) => {
+        const response = await api.post('teams/add',jsonObj)
+        return response.data;
+    }
 }
 
 const activity = {
