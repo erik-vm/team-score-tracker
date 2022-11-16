@@ -3,8 +3,8 @@ import './Team.css'
 import { Fade, Box, Typography, Modal, Backdrop } from '@mui/material';
 import Activities from './Activities';
 
-const Team = ({ name }) => {
-  const [activities, setActivities] = useState([
+const Team = ({ name, activities}) => {
+  /* const [activities, setActivities] = useState([
     {name: "Development  in  React  of  the  scoring  application", points:0},
     {name: "Rover  lunar", points:0},
     {name: "TDD  exercises", points:0},
@@ -14,15 +14,15 @@ const Team = ({ name }) => {
     {name: "Exercises  with  Selenium", points:0},
     {name: "Assessment  week  6", points:0},
 
-])
+]) */
 let totalPointsCounter = 0
-activities.forEach(activity => totalPointsCounter += activity.points)
+activities.forEach(activity => totalPointsCounter += activity.score)
 const [totalPoints, setTotalPoints] = useState(totalPointsCounter)
 
 const pointsSubmitHandler = (newActivity) => {
         let newActivities = activities.filter(a => !(a.name == newActivity.name))
         newActivities.push(newActivity)
-        setActivities(newActivities)
+        /* setActivities(newActivities) */
         setTotalPoints(totalPointsCounter += newActivity.points)
 }
 

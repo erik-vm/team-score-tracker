@@ -39,7 +39,7 @@ const Activities = ({activities, pointsSubmitHandler}) => {
       
 
       let totalPoints = 0
-      activities.forEach(activity => totalPoints += activity.points)
+      activities.forEach(activity => totalPoints += activity.score)
 
 
     return(
@@ -55,7 +55,7 @@ const Activities = ({activities, pointsSubmitHandler}) => {
             <TableBody align= "center">
                 {
                     activities.map((activity, i) => (
-                        <Activity pointsSubmitHandler={pointsSubmitHandler} name={activity.name} points={activity.points} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow} key={i}></Activity>
+                        <Activity pointsSubmitHandler={pointsSubmitHandler} name={activity.activityName} points={activity.score} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow} key={i}></Activity>
                     ))
                 }
             </TableBody>

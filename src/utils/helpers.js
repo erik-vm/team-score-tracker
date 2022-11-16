@@ -1,5 +1,5 @@
 import agent from '../data/agent';
-
+//N.B: We dont need this anymore
 //returns an array of the 10 initial teams
 export function populateTeams() {
     const INITIAL_TEAM_SIZE = 10;
