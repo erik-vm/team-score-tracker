@@ -20,7 +20,7 @@ export default function Teams() {
 
     const activityList = [
         {
-            activityId: 1, activityName: "Development  in  React  of  the  scoring  application", score: 5
+            activityId: 1, activityName: "Development  in  React  of  the  scoring  application", score: 0
         },
         {
             activityId: 2, activityName: "Rover  lunar", score: 0
