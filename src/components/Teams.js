@@ -20,7 +20,7 @@ export default function Teams() {
     //Adds a new team and updates the teams state
     const handleClick = () => {
         /* setIndex(teamIndex + 1); */
-        setTeams(() => [...teams, { name: `Team ${teams.length + 1}`, points: 0 }]);
+        setTeams(() => [...teams, { teamName: `Team ${teams.length + 1}`, points: 0 }]);
     }
 
     
@@ -40,7 +40,7 @@ export default function Teams() {
                              a unique key for every iteration */
                         teams.map((team, i) => (
                             //unique key
-                            <Team name={team.teamName} activities={team.activityList} key={i}></Team>
+                            <Team name={team.name} id={team.id} key={i}></Team>
                         ))
                     }
 

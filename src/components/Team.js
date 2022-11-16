@@ -1,9 +1,10 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import './Team.css'
 import { Fade, Box, Typography, Modal, Backdrop } from '@mui/material';
 import Activities from './Activities';
+import agent from '../data/agent';
 
-const Team = ({ name, activities}) => {
+const Team = ({ name, id}) => {
   /* const [activities, setActivities] = useState([
     {name: "Development  in  React  of  the  scoring  application", points:0},
     {name: "Rover  lunar", points:0},
@@ -15,6 +16,17 @@ const Team = ({ name, activities}) => {
     {name: "Assessment  week  6", points:0},
 
 ]) */
+const [activities, setActivities] = useState([])
+
+//useEffect -> a hook that runs the function inside it everytime the component is rendered
+useEffect(() => { 
+  //fetches the teams from the api and sets it to the teams state
+  (async () => {
+    const fetchedTeam = await agent.team.getById(id)
+    setActivities(fetchedTeam.activityList)
+  })();
+});
+
 let totalPointsCounter = 0
 activities.forEach(activity => totalPointsCounter += activity.score)
 const [totalPoints, setTotalPoints] = useState(totalPointsCounter)
