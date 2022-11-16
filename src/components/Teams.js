@@ -16,7 +16,7 @@ export default function Teams() {
         //fetches the teams from the api and sets it to the teams state
         
         (async () => setTeams(await agent.team.getAll()))();
-    });
+    }, []);
 
     const activityList = [
         {
@@ -57,8 +57,9 @@ export default function Teams() {
 
         const added = await agent.team.addTeam(newTeam);
 
-        console.log(added);
-        setTeams(async () => [...teams, added]);
+        console.log(added)
+        setTeams(() => [...teams, added]);
+        
         
 
     }

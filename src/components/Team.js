@@ -25,7 +25,7 @@ useEffect(() => {
     const fetchedTeam = await agent.team.getById(id)
     setActivities(fetchedTeam.activityList)
   })();
-});
+}, []);
 
 let totalPointsCounter = 0
 activities.forEach(activity => totalPointsCounter += activity.score)
