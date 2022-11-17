@@ -24,18 +24,18 @@ useEffect(() => {
   (async () => {
     const fetchedTeam = await agent.team.getById(id)
     setActivities(fetchedTeam.activityList)
+    
   })();
 }, []);
 
-let totalPointsCounter = 0
-activities.forEach(activity => totalPointsCounter += activity.score)
-const [totalPoints, setTotalPoints] = useState(totalPointsCounter)
 
-const pointsSubmitHandler = (newActivity) => {
-        let newActivities = activities.filter(a => !(a.name == newActivity.name))
-        newActivities.push(newActivity)
-        /* setActivities(newActivities) */
-        setTotalPoints(totalPointsCounter += newActivity.points)
+
+
+const pointsSubmitHandler = async(score, activityId) => {
+        await agent.activity.update(id, activityId, score)
+        const updatedTeam = await agent.team.getById(id);
+        setActivities(updatedTeam.activityList)
+        
 }
 
   const [open, setOpen] = React.useState(false);
@@ -61,6 +61,9 @@ const pointsSubmitHandler = (newActivity) => {
     boxShadow: 24,
     p: 4,
   };
+
+  let totalPoints = 0
+      activities.forEach(activity => totalPoints += activity.score)
 
   return (
     <>

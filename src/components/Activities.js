@@ -55,7 +55,7 @@ const Activities = ({activities, pointsSubmitHandler}) => {
             <TableBody align= "center">
                 {
                     activities.map((activity, i) => (
-                        <Activity pointsSubmitHandler={pointsSubmitHandler} name={activity.activityName} points={activity.score} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow} key={i}></Activity>
+                        <Activity pointsSubmitHandler={pointsSubmitHandler} activity={activity} StyledTableCell={StyledTableCell} StyledTableRow={StyledTableRow} key={i}></Activity>
                     ))
                 }
             </TableBody>

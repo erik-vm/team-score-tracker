@@ -21,8 +21,8 @@ const team = {
 }
 
 const activity = {
-    update: async(teamId, activityId, updatedActivity) => {
-        const response = await api.put(`teams/${teamId}/activities/${activityId}`, updatedActivity)
+    update: async(teamId, activityId, score) => {
+        const response = await api.put(`activities/teamId=${teamId}&activityId=${activityId}&score=${score}`)
         return response.data
     }
 }

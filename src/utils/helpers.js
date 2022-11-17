@@ -12,3 +12,9 @@ export function populateTeams() {
     //initialTeams.push(agent.team.getAll());
     return initialTeams;
 }
+
+export function calculateTotalPoints(activities){
+    let totalPointsCounter = 0
+    activities.forEach(activity => totalPointsCounter += activity.score)
+    return totalPointsCounter
+}

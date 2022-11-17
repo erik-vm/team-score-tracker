@@ -20,28 +20,28 @@ export default function Teams() {
 
     const activityList = [
         {
-            activityId: 1, activityName: "Development  in  React  of  the  scoring  application", score: 0
+            activityId: "1", activityName: "Development  in  React  of  the  scoring  application", score: 0
         },
         {
-            activityId: 2, activityName: "Rover  lunar", score: 0
+            activityId: "2", activityName: "Rover  lunar", score: 0
         },
         {
-            activityId: 3, activityName: "TDD  exercises", score: 0
+            activityId: "3", activityName: "TDD  exercises", score: 0
         },
         {
-            activityId: 4, activityName: "Ping-pong  programming", score: 0
+            activityId: "4", activityName: "Ping-pong  programming", score: 0
         },
         {
-            activityId: 4, activityName: "BugHunting", score: 0
+            activityId: "5", activityName: "BugHunting", score: 0
         },
         {
-            activityId: 6, activityName: "Assessment  week  5", score: 0
+            activityId: "6", activityName: "Assessment  week  5", score: 0
         },
         {
-            activityId: 7, activityName: "Exercises  with  Selenium", score: 0
+            activityId: "7", activityName: "Exercises  with  Selenium", score: 0
         },
         {
-            activityId: 8, activityName: "Assessment  week  6", score: 0
+            activityId: "8", activityName: "Assessment  week  6", score: 0
         }
     ]
 
